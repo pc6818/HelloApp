@@ -3,17 +3,7 @@ public class Main {
         String finalName;
 
         if (args.length > 0) {
-            StringBuilder nameBuilder = new StringBuilder();
-
-            for (String name : args) {
-                nameBuilder.append(name).append(", ");
-            }
-
-            if (nameBuilder.length() > 0) {
-                finalName = nameBuilder.substring(0, nameBuilder.length() - 2);
-            } else {
-                finalName = nameBuilder.toString();
-            }
+            finalName = String.join(", ", args);
         } else {
             finalName = "World";
         }
